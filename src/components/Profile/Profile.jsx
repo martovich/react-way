@@ -3,9 +3,9 @@ import s from './Profile.module.css'
 import MyPosts from "./MyPosts/MyPosts";
 
 const Profile = () => (
-    <div className={s.content}>
+    <div className={s.profile}>
         <div>
-            <img src='https://www.seonews.ru/upload/medialibrary/2d7/2d7a50bf0f6a956bbfcc00b13e25dab2.jpg'/>
+            <img src='https://www.seonews.ru/upload/medialibrary/2d7/2d7a50bf0f6a956bbfcc00b13e25dab2.jpg' alt=''/>
         </div>
         <div>
             avatar + discription
