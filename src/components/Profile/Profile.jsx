@@ -3,10 +3,10 @@ import s from './Profile.module.css'
 import MyPosts from "./MyPosts/MyPosts";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
-const Profile = () => (
+const Profile = (props) => (
     <div>
         <ProfileInfo/>
-        <MyPosts/>
+        <MyPosts newPostText={props.profilePage.newPostText} posts={props.profilePage.posts} addPost={props.addPost} onTextChanged={props.onTextChanged}/>
     </div>
 );
 export default Profile
