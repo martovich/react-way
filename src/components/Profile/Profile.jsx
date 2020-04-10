@@ -6,7 +6,7 @@ import ProfileInfo from "./ProfileInfo/ProfileInfo";
 const Profile = (props) => (
     <div>
         <ProfileInfo/>
-        <MyPosts newPostText={props.profilePage.newPostText} posts={props.profilePage.posts} addPost={props.addPost} onTextChanged={props.onTextChanged}/>
+        <MyPosts newPostText={props.profilePage.newPostText} posts={props.profilePage.posts} dispatch={props.dispatch}/>
     </div>
 );
 export default Profile
