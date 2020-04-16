@@ -11,5 +11,10 @@ let rerenderEntireTree = (state) => {
     ReactDOM.render(<HashRouter><App state={state} dispatch={store.dispatch.bind(store)}/></HashRouter>, document.getElementById('root'));
 };
 rerenderEntireTree(store.getState());
-store.subscribe(rerenderEntireTree);
+
+store.subscribe(()=>{
+    let state = store.getState();
+    rerenderEntireTree(state);
+});
+
 serviceWorker.unregister();
