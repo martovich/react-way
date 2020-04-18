@@ -8,7 +8,7 @@ import * as serviceWorker from './serviceWorker';
 
 
 let rerenderEntireTree = (state) => {
-    ReactDOM.render(<HashRouter><App state={state} dispatch={store.dispatch.bind(store)}/></HashRouter>, document.getElementById('root'));
+    ReactDOM.render(<HashRouter><App state={state} dispatch={store.dispatch.bind(store)} store={store}/></HashRouter>, document.getElementById('root'));
 };
 rerenderEntireTree(store.getState());
 
