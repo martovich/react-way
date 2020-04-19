@@ -3,16 +3,23 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import store from './redux/redux-store';
-import {HashRouter} from "react-router-dom";
+import {BrowserRouter} from "react-router-dom";
 import * as serviceWorker from './serviceWorker';
+import {Provider} from 'react-redux';
 
 
-let rerenderEntireTree = (state) => {
-    ReactDOM.render(<HashRouter><App state={state} dispatch={store.dispatch.bind(store)} store={store}/></HashRouter>, document.getElementById('root'));
+let rerenderEntireTree = () => {
+    ReactDOM.render(
+        <BrowserRouter>
+            <Provider store={store}>
+                {/*<App state={state} dispatch={store.dispatch.bind(store)} store={store}/>*/}
+                <App/>
+            </Provider>
+        </BrowserRouter>, document.getElementById('root'));
 };
 rerenderEntireTree(store.getState());
 
-store.subscribe(()=>{
+store.subscribe(() => {
     let state = store.getState();
     rerenderEntireTree(state);
 });
