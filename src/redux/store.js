@@ -1,4 +1,4 @@
-import profileReducer from "./profileReducer";
+import profileReducer from "./profile-reducer";
 import dialogsReducer from "./dialogsReducer";
 import sidebarReducer from "./sidebarReducer";
 
