@@ -3,7 +3,7 @@ import s from "./Dialogs.module.css";
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 
-const Dialogs = (props) => {
+const Dialogs = (props: any) => {
      let state = props.dialogsPage;
     let dialogsElements = state.dialogs.map(dialog => <DialogItem id={dialog.id} name={dialog.name}/>);
     let messagesElements = state.messages.map(msg => <Message id={msg.id} message={msg.message}/>);

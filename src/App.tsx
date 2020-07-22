@@ -7,7 +7,7 @@ import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
-import Route from "react-router-dom/es/Route";
+import Route from "react-router-dom";
 
 const App = (props) => (
         <div className='app-wrapper'>
